@@ -1,0 +1,20 @@
+{
+  "name": "aident",
+  "interface": {
+    "displayName": "Aident"
+  },
+  "plugins": [
+    {
+      "name": "aident",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aident"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
