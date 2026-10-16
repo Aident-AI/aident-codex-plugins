@@ -12,8 +12,8 @@ Then open the Codex plugin directory, install **Aident**, and authenticate when 
 
 ## What It Adds
 
-- Aident MCP server: `https://app.aident.ai/api/mcp`
-- Aident workflow guidance for capability search, skills, integrations, playbooks, templates, and execution history
+- Aident MCP server: `https://loadout.aident.ai/mcp`
+- Loadout guidance for discovering Apps, Actions and Skills, connecting accounts through Vault, and reviewing Audit
 - Plugin metadata and assets for the Codex plugin directory
 
 ## Development

@@ -1,28 +1,29 @@
 {
   "name": "aident",
-  "version": "0.1.0",
-  "description": "Use Aident capabilities, integrations, playbooks, templates, and execution history from Codex.",
+  "version": "0.1.1",
+  "description": "Use Aident Loadout to discover Apps and Actions, connect accounts through Vault, and review Audit from Codex.",
   "author": {
     "name": "Aident",
     "email": "support@aident.ai",
     "url": "https://aident.ai"
   },
-  "homepage": "https://app.aident.ai",
+  "homepage": "https://aident.ai",
   "repository": "https://github.com/Aident-AI/aident-codex-plugins",
   "license": "MIT",
   "keywords": [
     "aident",
+    "loadout",
     "mcp",
     "integrations",
-    "playbooks",
-    "automation"
+    "skills",
+    "actions"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Aident",
-    "shortDescription": "Use Aident integrations and playbooks from Codex",
-    "longDescription": "Connect Codex to Aident's MCP server for capability search, skill execution, integrations, playbooks, templates, dashboard data, and execution details.",
+    "shortDescription": "Connect Codex to Aident Loadout",
+    "longDescription": "Discover Apps and Actions, read Skills, connect accounts through Aident Vault, execute authorized tasks, and review action calls in Audit.",
     "developerName": "Aident",
     "category": "Productivity",
     "capabilities": [
@@ -34,9 +35,9 @@
     "privacyPolicyURL": "https://aident.ai/privacy-policy",
     "termsOfServiceURL": "https://aident.ai/terms-of-service",
     "defaultPrompt": [
-      "Search Aident for the right capability",
-      "Generate an Aident playbook",
-      "Check my Aident integration status"
+      "Find a Loadout tool for this task",
+      "Check my connected Apps",
+      "Show my recent Loadout Audit"
     ],
     "brandColor": "#111827",
     "composerIcon": "./assets/icon.png",
