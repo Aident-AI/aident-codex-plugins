@@ -1,31 +1,30 @@
 ---
 name: aident
-description: Use Aident from Codex for capability discovery, skill execution, integration connection status, playbook generation and execution, templates, dashboards, and execution details through the Aident MCP server.
+description: Use Aident Loadout from Codex to discover Apps and Actions, read Skills, check connected accounts in Vault, execute authorized tasks, and review action calls in Audit through the Aident MCP server.
 ---
 
-# Aident
+# Aident Loadout
 
-Use this skill when the user asks Codex to work with Aident capabilities, integrations, playbooks, templates, dashboards, or execution history.
+Use this skill when the user asks Codex to use Aident Loadout capabilities, connect an App, execute an Action, or inspect Audit history.
 
 ## Workflow
 
-1. Prefer the `aident` MCP server tools for live Aident data and actions.
-2. Start with capability search when the user asks for a task but does not know the exact skill or integration.
-3. Check integration status before executing skills that require connected third-party accounts.
-4. If an integration is missing, use the Aident integration connection flow and tell the user which account or service they need to authorize.
-5. For playbook requests, generate or inspect the playbook first, then execute only after the user confirms externally visible actions.
+1. Prefer the plugin's `aident` MCP server for live Loadout data and Actions.
+2. Start with capability search when the user describes a task. Use the exact capability names returned by discovery.
+3. Read the selected capability's live input schema and check its required integrations in Vault before execution.
+4. If an integration is missing, use the returned Loadout connection flow and tell the user which account or service needs authorization. Never request raw credentials in chat.
+5. Execute within the user's authorized scope and honor the capability's approval requirements. An Action executes an app operation; a Skill supplies authored instructions.
+6. Verify the result and use Audit history to recover uncertain execution outcomes before retrying an action that may already have happened.
 
-## Common Requests
+## Common requests
 
-- Search for available Aident skills or integrations.
-- Execute an Aident skill with user-provided inputs.
-- Generate, list, inspect, update, or execute Aident playbooks.
-- Search, inspect, or instantiate Aident templates.
-- Check active playbooks, execution details, or execution messages.
-- Connect missing integrations needed for a task.
+- Find a Loadout tool for a task.
+- Discover and execute an authorized Action.
+- Find and read a Skill.
+- Check connected Apps in Vault.
+- Connect a missing integration.
+- Review recent Loadout action calls in Audit.
 
-## Notes
+## Authentication
 
-- Aident authentication is handled by the MCP OAuth flow at `https://app.aident.ai/api/mcp`.
-- Do not ask the user for raw Aident access tokens.
-- Do not manually edit Codex MCP config when this plugin is installed; the plugin supplies the MCP server configuration.
+The plugin supplies `https://loadout.aident.ai/mcp`. Authenticate through the MCP OAuth flow when prompted. Do not ask for raw Aident access tokens or manually edit Codex MCP configuration when this plugin is installed.

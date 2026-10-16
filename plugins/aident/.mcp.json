@@ -2,7 +2,7 @@
   "mcpServers": {
     "aident": {
       "type": "http",
-      "url": "https://app.aident.ai/api/mcp"
+      "url": "https://loadout.aident.ai/mcp"
     }
   }
 }
